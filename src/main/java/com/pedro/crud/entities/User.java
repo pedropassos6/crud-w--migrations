@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @AllArgsConstructor
 @Getter
@@ -26,6 +28,9 @@ public class User implements Serializable {
     private String email;
     private String phone;
     private String password;
+
+    @OneToMany(mappedBy = "client")
+    private List<Order> orders = new ArrayList<>();
 
     public User() {
     }
