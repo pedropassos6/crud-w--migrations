@@ -1,0 +1,1 @@
+INSERT INTO tb_order (client_id, date_order, order_status) values (1, '2023-01-29', 2);
